@@ -17,4 +17,12 @@ class Facture:
         if self.date_vente < self.fleur.date_coupe:
          raise ValueError("La date de vente ne peut pas être antérieure à la date de coupe des fleurs.")
         
+
+    def calculer_prix_total(self): #prix à payer pour le fleur
+        """Calculer le prix total des fleurs + TVA de 20%."""
+        somme_fleurs = sum(fleur.prix_fleur for fleur in self.fleur)
+        tva = 0.20 * somme_fleurs
+        prix_vente = somme_fleurs + tva
+        return prix_vente
+        
     

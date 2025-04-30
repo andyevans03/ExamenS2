@@ -8,6 +8,9 @@ class CarteFidelite:
     def ajouter_facture(self, facture): #aajouter une facture
         self.factures.append(facture)
 
+    def nb_factures(self) -> int: #compter le nombre de factures insérer
+        return len(self.factures)
+
     def remettre_a_zero(self): #remettre à zero l'historique des factures
         self.factures.clear()
 
