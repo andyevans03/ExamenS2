@@ -47,6 +47,17 @@ class TestUnitaireCarteFidelite(unittest.TestCase):
     
     def test_niveau_fidelite(self):
         facture_mock_1 = MagicMock()
-        facture_mock_1.name= "Facture 1"
+        facture_mock_1.facture= "Facture 1" ,"1334", "2024/12/03", "Tulipe", "500"
 
+        self.carte.ajouter_facture(facture_mock_1 )
+        self.assertEqual((self.carte.nb_factures()), 1)
+
+        self.carte.niveau_fidelite()
+
+
+
+
+
+
+   
 

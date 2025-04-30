@@ -16,9 +16,9 @@ class CarteFidelite:
 
     def niveau_fidelite(self) -> str: #niveau de fidelité des clients si client depense entre 2000 et 500 il est considéré commme Or
         total_depense = sum(f.total() for f in self.factures)
-        if total_depense <= 2000:
+        if total_depense < 2000:
             return "Or"
-        elif total_depense <= 500:
+        elif total_depense < 500:
             return "Argent"
         elif total_depense < 200:
             return "Bronze "
